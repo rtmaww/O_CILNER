@@ -9,11 +9,8 @@ This is the source code of the ACL 2023 paper: "Learning 'O' Helps for Learning 
     - [Get the Data](#get-the-data)
     - [Data Format](Data-format)
   - [Structure](#structure)
-  - [Key Implementations](#Key-Implementations)
-    - [N way K~2K shot Sampler](#Sampler)
   - [How to Run](#How-to-Run)
 - [Citation](#Citation)
-- [Connection](#Connection)
 
 ## Requirements
 
