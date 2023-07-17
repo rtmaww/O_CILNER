@@ -1,0 +1,65 @@
+step 0
+labels:['O', 'building-library', 'organization-showorganization', 'other-award', 'building-other', 'organization-religion', 'organization-sportsteam']
+train_dataset_len:18435
+eval_dataset_len:2656
+test_dataset_len:5296
+step 1
+labels:['O', 'building-library', 'organization-showorganization', 'other-award', 'building-other', 'organization-religion', 'organization-sportsteam', 'person-politician', 'art-painting', 'event-disaster', 'organization-other', 'product-weapon', 'building-hotel']
+train_dataset_len:18966
+eval_dataset_len:2788
+test_dataset_len:10267
+step 2
+labels:['O', 'building-library', 'organization-showorganization', 'other-award', 'building-other', 'organization-religion', 'organization-sportsteam', 'person-politician', 'art-painting', 'event-disaster', 'organization-other', 'product-weapon', 'building-hotel', 'event-sportsevent', 'other-chemicalthing', 'art-writtenart', 'product-game', 'location-mountain', 'other-livingthing']
+train_dataset_len:11973
+eval_dataset_len:1652
+test_dataset_len:13055
+step 1
+labels:['O', 'person-politician', 'art-painting', 'event-disaster', 'organization-other', 'product-weapon', 'building-hotel']
+train_dataset_len:18966
+eval_dataset_len:2788
+test_dataset_len:10267
+step 2
+labels:['O', 'event-sportsevent', 'other-chemicalthing', 'art-writtenart', 'product-game', 'location-mountain', 'other-livingthing']
+train_dataset_len:11973
+eval_dataset_len:1652
+test_dataset_len:13055
+step 3
+labels:['O', 'location-island', 'person-scholar', 'building-restaurant', 'other-astronomything', 'building-airport', 'product-other']
+train_dataset_len:9448
+eval_dataset_len:1326
+test_dataset_len:15178
+step 4
+labels:['O', 'location-road/railway/highway/transit', 'other-educationaldegree', 'building-sportsfacility', 'event-election', 'person-actor', 'art-film']
+train_dataset_len:10295
+eval_dataset_len:1477
+test_dataset_len:17254
+step 5
+labels:['O', 'location-other', 'product-ship', 'organization-politicalparty', 'person-soldier', 'location-GPE', 'other-god']
+train_dataset_len:47648
+eval_dataset_len:6941
+test_dataset_len:24429
+step 6
+labels:['O', 'event-attack/battle/war/militaryconflict', 'organization-sportsleague', 'building-theater', 'organization-education', 'product-train', 'other-medical']
+train_dataset_len:13237
+eval_dataset_len:1852
+test_dataset_len:25631
+step 7
+labels:['O', 'event-protest', 'person-other', 'product-car', 'art-other', 'organization-company', 'other-disease']
+train_dataset_len:30899
+eval_dataset_len:4416
+test_dataset_len:29014
+step 8
+labels:['O', 'other-biologything', 'person-artist/author', 'location-bodiesofwater', 'art-broadcastprogram', 'other-language', 'person-athlete']
+train_dataset_len:21794
+eval_dataset_len:3114
+test_dataset_len:31036
+step 9
+labels:['O', 'product-airplane', 'art-music', 'product-software', 'event-other', 'location-park', 'organization-media/newspaper']
+train_dataset_len:11963
+eval_dataset_len:1706
+test_dataset_len:31874
+step 10
+labels:['O', 'other-currency', 'person-director', 'building-hospital', 'other-law', 'organization-government/governmentagency', 'product-food']
+train_dataset_len:9787
+eval_dataset_len:1443
+test_dataset_len:32565
