@@ -368,59 +368,6 @@ class BceLoss(Module):
 
             return criterion(valid_output, target)
 
-
-def bce_kl(output, labels, num_labels, old_target=None, cal_O=False, o_weight=None):
-        pad_token_label_id = CrossEntropyLoss().ignore_index
-
-
-        pos_weight = torch.ones(num_labels).to(output.device)
-        if o_weight is not None:
-            pos_weight[0] = o_weight
-        if not cal_O:
-            pos_weight = pos_weight[1:]
-        criterion = torch.nn.BCEWithLogitsLoss(reduction='mean', pos_weight=pos_weight)
-        # pos_weight = torch.ones([64])  # All weights are equal to 1
-        # target = get_one_hot(target, num_labels)
-        # target_o = get_one_hot(target_o, num_labels)
-        idx = torch.where(labels >= 0)[0]
-        valid_output = output[idx] # (b*l, num_labels)
-        valid_labels = labels[idx]
-        target = get_one_hot(valid_labels, num_labels) # (b*l,num_labels)
-
-
-        if old_target is None:
-
-            # 如果 不计算O的W的loss，只计算实体的W的loss
-            if not cal_O:
-                target = target[:, 1:] # 不计算O的维度
-                valid_output = valid_output[:, 1:] # 不计算O的维度
-
-            return criterion(valid_output, target)
-
-        else:
-
-            old_target = old_target[idx]
-            old_target = torch.sigmoid(old_target)
-            old_task_size = old_target.shape[1]
-            mask_O = (valid_labels < old_task_size).view(-1,1).repeat(1, num_labels) # (b*l,num_labels)
-            mask_new = (valid_labels >= old_task_size).view(-1,1).repeat(1, num_labels)
-
-            target_new = target.clone()
-            target_new[:, :old_task_size] = 0
-            target_new = target_new * mask_new
-
-            # target_O = target.clone()
-            # target_O[:, :old_task_size] = old_target
-            # target_O = target_O * mask_O
-
-            # target = target_new + target_O
-            target = target_new
-            if not cal_O:
-                target = target[:, 1:] # 不计算O的维度
-                valid_output = valid_output[:, 1:] # 不计算O的维度
-
-            return criterion(valid_output, target)
-
 class BceLossNoKd(Module):
     def __init__(self, o_weight=None):
         super(BceLossNoKd, self).__init__()
