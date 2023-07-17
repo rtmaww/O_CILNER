@@ -1,6 +1,6 @@
 nltk>=3.6.4
-numpy==1.18.5
+numpy==1.20.2
 torch==1.9.0
-transformers==4.0.1
-apex==0.9.10dev
-scikit_learn==0.24.1
+transformers==4.17.0
+apex==0.1
+scikit_learn==1.0.2
