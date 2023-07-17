@@ -1,19 +1,16 @@
 # O_CILNER
-This is the source code of the ACL 2023 paper: "Learning 'O' Helps for Learning More: Handling the Unlabeled Entity Problem for Class-incremental NER" 
+This is the source code of the ACL 2023 paper: [**Learning 'O' Helps for Learning More: Handling the Unlabeled Entity Problem for Class-incremental NER**](https://aclanthology.org/2023.acl-long.328/)
 
 ## Contents
 
 - [Getting Started](#requirements)
   - [Requirements](#requirements)
   - [Dataset](#dataset)
-    - [Get the Data](#get-the-data)
-    - [Data Format](Data-format)
+    - [Experiment Setting](#experiment-setting)
+    - [Data Format](#data-format)
   - [Structure](#structure)
-  - [Key Implementations](#Key-Implementations)
-    - [N way K~2K shot Sampler](#Sampler)
   - [How to Run](#How-to-Run)
 - [Citation](#Citation)
-- [Connection](#Connection)
 
 ## Requirements
 
@@ -24,13 +21,15 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-- Few-NERD dataset
-[Few-NERD dataset](https://ningding97.github.io/fewnerd/), which contains 66 fine-grained entity types. We randomly split the 66 classes in Few-NERD into 11 tasks, corresponding to 11 steps, each of which contains 6 entity classes and an "O" class. The training set and development set of each task contains sentences only labeled with classes of the current task. The test set contains sentences labeled with all learnt classes in task.
 
-The instance data is located in "./data/tasks".
+### Experiment Setting
+- Few-NERD dataset: 
+[Few-NERD dataset](https://ningding97.github.io/fewnerd/), which contains 66 fine-grained entity types. We randomly split the 66 classes in Few-NERD into 11 tasks, corresponding to 11 steps, each of which contains 6 entity classes and an "O" class. The training set and development set of each task contains sentences only labeled with classes of the current task. The test set contains sentences labeled with all learned classes in the task.
 
-- OntoNotes 5.0 dataset
-OntoNotes 5.0 dataset is splited 18 classes into 6 tasks in the same way.
+The instance data is located in `./data/tasks`.
+
+- OntoNotes 5.0 dataset: 
+On the OntoNotes 5.0 dataset, we split 18 classes into 6 tasks in the same way.
 
 ### Data Format
 
@@ -87,7 +86,7 @@ The structure of our project is:
 
 ## How to Run
 
-Run `cil_ner_train\run_incremental_proto.sh` or `cil_ner_train\run_incremental_rehearsal.sh`.
+Run `./cil_ner_train/run_incremental_proto.sh` or `./cil_ner_train/run_incremental_rehearsal.sh`.
 
 
 ## Citation
