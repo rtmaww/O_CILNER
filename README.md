@@ -6,8 +6,7 @@ This is the source code of the ACL 2023 paper: "Learning 'O' Helps for Learning 
 - [Getting Started](#requirements)
   - [Requirements](#requirements)
   - [Dataset](#dataset)
-    - [Get the Data](#get-the-data)
-    - [Data Format](Data-format)
+    - [Data Format](#data-format)
   - [Structure](#structure)
   - [How to Run](#How-to-Run)
 - [Citation](#Citation)
@@ -22,12 +21,12 @@ pip install -r requirements.txt
 
 ## Dataset
 - Few-NERD dataset
-[Few-NERD dataset](https://ningding97.github.io/fewnerd/), which contains 66 fine-grained entity types. We randomly split the 66 classes in Few-NERD into 11 tasks, corresponding to 11 steps, each of which contains 6 entity classes and an "O" class. The training set and development set of each task contains sentences only labeled with classes of the current task. The test set contains sentences labeled with all learnt classes in task.
+[Few-NERD dataset](https://ningding97.github.io/fewnerd/), which contains 66 fine-grained entity types. We randomly split the 66 classes in Few-NERD into 11 tasks, corresponding to 11 steps, each of which contains 6 entity classes and an "O" class. The training set and development set of each task contains sentences only labeled with classes of the current task. The test set contains sentences labeled with all learned classes in the task.
 
 The instance data is located in "./data/tasks".
 
 - OntoNotes 5.0 dataset
-OntoNotes 5.0 dataset is splited 18 classes into 6 tasks in the same way.
+On the OntoNotes 5.0 dataset, we split 18 classes into 6 tasks in the same way.
 
 ### Data Format
 
@@ -84,7 +83,7 @@ The structure of our project is:
 
 ## How to Run
 
-Run `cil_ner_train\run_incremental_proto.sh` or `cil_ner_train\run_incremental_rehearsal.sh`.
+Run `./cil_ner_train/run_incremental_proto.sh` or `./cil_ner_train/run_incremental_rehearsal.sh`.
 
 
 ## Citation
