@@ -14,7 +14,7 @@ This is the source code of the ACL 2023 paper: [**Learning 'O' Helps for Learnin
 
 ## Requirements
 
- Run the following script to install the remaining dependencies,
+ Run the following script to install the remaining dependencies. Python and CUDA version: `Python 3.7.10 / CUDA 11.7 `
 
 ```shell
 pip install -r requirements.txt
