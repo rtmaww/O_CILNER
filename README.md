@@ -26,7 +26,7 @@ pip install -r requirements.txt
 - Few-NERD dataset: 
 [Few-NERD dataset](https://ningding97.github.io/fewnerd/), which contains 66 fine-grained entity types. We randomly split the 66 classes in Few-NERD into 11 tasks, corresponding to 11 steps, each of which contains 6 entity classes and an "O" class. The training set and development set of each task contains sentences only labeled with classes of the current task. The test set contains sentences labeled with all learned classes in the task.
 
-The instance data is located in "./data/tasks".
+The instance data is located in `./data/tasks`.
 
 - OntoNotes 5.0 dataset: 
 On the OntoNotes 5.0 dataset, we split 18 classes into 6 tasks in the same way.
